@@ -1,0 +1,49 @@
+<h2 class="content-block">Organizations</h2>
+
+<dx-data-grid class="dx-card wide-card"
+  [dataSource]="dataSource"
+  [showBorders]="false"
+  [focusedRowEnabled]="true"
+  [focusedRowIndex]="0"
+  [columnAutoWidth]="true"
+  [columnHidingEnabled]="true">
+
+  <dxo-paging [pageSize]="10"></dxo-paging>
+  <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+
+  <dxi-column
+    dataField="Task_ID"
+    [width]="90"
+    caption="ID"
+    [hidingPriority]="2"
+    [allowEditing]="false">
+  </dxi-column>
+  <dxi-column
+  dataField="Task_Status"
+  caption="Code"
+  [hidingPriority]="6">
+  </dxi-column>
+  <dxi-column
+    dataField="Task_Subject"
+    [width]="190"
+    caption="Name"
+    [hidingPriority]="8">
+  </dxi-column>
+  <dxi-column
+    dataField="Task_Status"
+    caption="Reference"
+    [hidingPriority]="6">
+  </dxi-column>
+  <dxi-column
+  dataField="Task_Status"
+  caption="CGE"
+  [hidingPriority]="6">
+  </dxi-column>
+  <dxo-editing
+  mode="popup"
+  [allowUpdating]="true"
+  [allowDeleting]="true"
+  [allowAdding]="true">
+</dxo-editing>
+</dx-data-grid>
